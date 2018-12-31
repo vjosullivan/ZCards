@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3484AD8921DA1B51002A75B2 /* SimpleSimonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484AD8821DA1B51002A75B2 /* SimpleSimonGame.swift */; };
 		F1B1CB4C21D907500009C001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB4B21D907500009C001 /* AppDelegate.swift */; };
 		F1B1CB4E21D907500009C001 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB4D21D907500009C001 /* ViewController.swift */; };
 		F1B1CB5121D907500009C001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B1CB4F21D907500009C001 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3484AD8821DA1B51002A75B2 /* SimpleSimonGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSimonGame.swift; sourceTree = "<group>"; };
 		F1B1CB4821D907500009C001 /* ZCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B1CB4B21D907500009C001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1B1CB4D21D907500009C001 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3484AD8721DA1A09002A75B2 /* SimpleSimon */ = {
+			isa = PBXGroup;
+			children = (
+				3484AD8821DA1B51002A75B2 /* SimpleSimonGame.swift */,
+			);
+			path = SimpleSimon;
+			sourceTree = "<group>";
+		};
 		F1B1CB3F21D907500009C001 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		F1B1CB4A21D907500009C001 /* ZCards */ = {
 			isa = PBXGroup;
 			children = (
+				3484AD8721DA1A09002A75B2 /* SimpleSimon */,
 				F1B1CB5D21D9078C0009C001 /* Cards */,
 				F1B1CB4B21D907500009C001 /* AppDelegate.swift */,
 				F1B1CB4D21D907500009C001 /* ViewController.swift */,
@@ -230,6 +241,7 @@
 			files = (
 				F1B1CB6521D914320009C001 /* Deck.swift in Sources */,
 				F1B1CB4E21D907500009C001 /* ViewController.swift in Sources */,
+				3484AD8921DA1B51002A75B2 /* SimpleSimonGame.swift in Sources */,
 				F1B1CB7821D9252B0009C001 /* ShuffleCode.swift in Sources */,
 				F1B1CB6121D908650009C001 /* Suit.swift in Sources */,
 				F1B1CB5F21D907AF0009C001 /* Card.swift in Sources */,

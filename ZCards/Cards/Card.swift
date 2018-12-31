@@ -16,3 +16,9 @@ struct Card {
 extension Card: Equatable {
     
 }
+
+extension Card: CustomStringConvertible {
+    var description: String {
+        return "\(rank) of \(suit)"
+    }
+}
