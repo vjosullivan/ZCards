@@ -10,21 +10,20 @@ import Foundation
 
 class SimpleSimon {
     
-    private var columns = [[Card]]()
+    private var decks = [Deck]()
     
     init() {
         var deck = Deck(type: .shuffled)
         for _ in 0..<10 {
-            columns.append([Card]())
+            decks.append(Deck(type: .empty))
         }
         for limit in [10, 9, 8, 7, 6, 5, 4, 3] {
             for index in 0..<limit {
-                print(index)
-                columns[index].append(deck.drawTopCard())
+                decks[index].add(deck.drawTopCard(), to: .topOfDeck)
             }
         }
-        for c in columns {
-            print(c.count, c)
+        for c in decks {
+            print(c)
         }
     }
 }

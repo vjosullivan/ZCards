@@ -35,7 +35,20 @@ struct Deck {
     public mutating func drawTopCard() -> Card {
         return deck.remove(at: 0)
     }
-
+    
+    public mutating func addToTop(_ card: Card) {
+        deck.insert(card, at: 0)
+    }
+    
+    public mutating func add(_ card: Card, to location: DeckLocation) {
+        switch location {
+        case .topOfDeck:
+            deck.insert(card, at: 0)
+        case .bottomOfDeck:
+            deck.append(card)
+        }
+    }
+    
     private static func populated() -> [Card] {
         var orderedDeck = [Card]()
         for s in Suit.allCases {
@@ -47,8 +60,23 @@ struct Deck {
     }
 }
 
+extension Deck: CustomStringConvertible {
+    var description: String {
+        if self.count == 0 {
+            return "Empty deck"
+        }
+        return "\(self.count) cards: \(deck)"
+            
+    }
+}
+
 enum DeckType {
     case empty
     case sorted
     case shuffled
+}
+
+enum DeckLocation {
+    case topOfDeck
+    case bottomOfDeck
 }
