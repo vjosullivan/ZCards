@@ -11,6 +11,9 @@ import XCTest
 
 class DeckTests: XCTestCase {
 
+    let aceOfClubs = Card(rank: Rank.Ace,   suit: Suit.Clubs)
+    let twoOfClubs = Card(rank: Rank.Two,   suit: Suit.Clubs)
+
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -21,28 +24,33 @@ class DeckTests: XCTestCase {
 
     func testNewEmptyDeck() {
         let d = Deck(type: .empty)
-        XCTAssertEqual(0, d.cards.count, "Empty deck should have zero cards.")
+        XCTAssertEqual(0, d.count, "Empty deck should have zero cards.")
     }
 
     func testNewSortedDeck() {
         let d = Deck(type: .sorted)
-        let c01 = Card(rank: Rank.Ace,   suit: Suit.Clubs)
-        let c20 = Card(rank: Rank.Seven, suit: Suit.Diamonds)
-        let c40 = Card(rank: Rank.Ace,   suit: Suit.Spades)
-        XCTAssertEqual(52, d.cards.count, "A new sorted deck should have fiftytwo cards.")
-        XCTAssertEqual(c01, d.cards[ 0], "The first card should be the Ace of Clubs.")
-        XCTAssertEqual(c20, d.cards[19], "The twentieth card should be the Seven of Diamonds.")
-        XCTAssertEqual(c40, d.cards[39], "The fortieth card should be the Ace of Spades.")
+        XCTAssertEqual(52, d.count, "A new sorted deck should have fiftytwo cards.")
+        XCTAssertEqual(aceOfClubs, d.topCard, "The first card should be the Ace of Clubs.")
     }
 
     func testNewShuffledDeck() {
         let d = Deck(type: .shuffled)
-        let c01 = Card(rank: Rank.Ace,   suit: Suit.Clubs)
-        let c20 = Card(rank: Rank.Seven, suit: Suit.Diamonds)
-        let c40 = Card(rank: Rank.Ace,   suit: Suit.Spades)
-        XCTAssertEqual(52, d.cards.count, "A new sorted deck should have fiftytwo cards.")
-        XCTAssertNotEqual(c01, d.cards[ 0], "The first card should not usually be the Ace of Clubs.")
-        XCTAssertNotEqual(c20, d.cards[19], "The twentieth card should not usually be the Seven of Diamonds.")
-        XCTAssertNotEqual(c40, d.cards[39], "The fortieth card should not usually be the Ace of Spades.")
+        XCTAssertEqual(52, d.count, "A new sorted deck should have fiftytwo cards.")
+        XCTAssertNotEqual(aceOfClubs, d.topCard, "The first card should not usually be the Ace of Clubs.")
+    }
+    
+    func testTopCard() {
+        let d = Deck(type: .sorted)
+        XCTAssertEqual(52, d.count, "A new sorted deck should have fiftytwo cards.")
+        XCTAssertEqual(aceOfClubs, d.topCard, "The first card should be the Ace of Clubs.")
+        XCTAssertEqual(52, d.count, "Deck should still have 52 cards after peeking at the top card.")
+    }
+    
+    func testRemoveTopCard() {
+        var d = Deck(type: .sorted)
+        let drawnCard = d.drawTopCard()
+        XCTAssertEqual(51, d.count, "Deck with one card drawn should have fiftyone cards.")
+        XCTAssertEqual(aceOfClubs, drawnCard, "The drawn card should be the Ace of Clubs.")
+        XCTAssertEqual(twoOfClubs, d.topCard, "The next top card should be the Two of Clubs.")
     }
 }

@@ -10,23 +10,33 @@ import Foundation
 
 struct Deck {
 
-    var cards: [Card]
+    private var deck: [Card]
+    
+    var count: Int {
+        return deck.count
+    }
+    
+    var topCard: Card {
+        return deck[0]
+    }
 
     init(type: DeckType) {
 
-
         switch type {
         case .empty:
-            cards = [Card]()
+            deck = [Card]()
         case .sorted:
-            cards = Deck.populate()
+            deck = Deck.populated()
         case .shuffled:
-            cards = Deck.populate()
-            cards.shuffle()
+            deck = Deck.populated().shuffled()
         }
     }
+    
+    public mutating func drawTopCard() -> Card {
+        return deck.remove(at: 0)
+    }
 
-    private static func populate() -> [Card] {
+    private static func populated() -> [Card] {
         var orderedDeck = [Card]()
         for s in Suit.allCases {
             for r in Rank.allCases {
