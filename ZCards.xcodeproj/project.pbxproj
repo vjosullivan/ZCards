@@ -12,7 +12,23 @@
 		F1B1CB5121D907500009C001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B1CB4F21D907500009C001 /* Main.storyboard */; };
 		F1B1CB5321D907550009C001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B1CB5221D907550009C001 /* Assets.xcassets */; };
 		F1B1CB5621D907550009C001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B1CB5421D907550009C001 /* LaunchScreen.storyboard */; };
+		F1B1CB5F21D907AF0009C001 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB5E21D907AF0009C001 /* Card.swift */; };
+		F1B1CB6121D908650009C001 /* Suit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB6021D908650009C001 /* Suit.swift */; };
+		F1B1CB6321D90FB70009C001 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB6221D90FB70009C001 /* Rank.swift */; };
+		F1B1CB6521D914320009C001 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB6421D914320009C001 /* Deck.swift */; };
+		F1B1CB7621D91AFD0009C001 /* DeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB7521D91AFD0009C001 /* DeckTests.swift */; };
+		F1B1CB7821D9252B0009C001 /* ShuffleCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB7721D9252B0009C001 /* ShuffleCode.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F1B1CB6F21D914F80009C001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1B1CB4021D907500009C001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1B1CB4721D907500009C001;
+			remoteInfo = ZCards;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F1B1CB4821D907500009C001 /* ZCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +38,25 @@
 		F1B1CB5221D907550009C001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1B1CB5521D907550009C001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1B1CB5721D907550009C001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1B1CB5E21D907AF0009C001 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F1B1CB6021D908650009C001 /* Suit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suit.swift; sourceTree = "<group>"; };
+		F1B1CB6221D90FB70009C001 /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
+		F1B1CB6421D914320009C001 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		F1B1CB6A21D914F80009C001 /* ZCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B1CB6E21D914F80009C001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1B1CB7521D91AFD0009C001 /* DeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTests.swift; sourceTree = "<group>"; };
+		F1B1CB7721D9252B0009C001 /* ShuffleCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F1B1CB4521D907500009C001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1B1CB6721D914F80009C001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				F1B1CB4A21D907500009C001 /* ZCards */,
+				F1B1CB6B21D914F80009C001 /* ZCardsTests */,
 				F1B1CB4921D907500009C001 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				F1B1CB4821D907500009C001 /* ZCards.app */,
+				F1B1CB6A21D914F80009C001 /* ZCardsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +87,7 @@
 		F1B1CB4A21D907500009C001 /* ZCards */ = {
 			isa = PBXGroup;
 			children = (
+				F1B1CB5D21D9078C0009C001 /* Cards */,
 				F1B1CB4B21D907500009C001 /* AppDelegate.swift */,
 				F1B1CB4D21D907500009C001 /* ViewController.swift */,
 				F1B1CB4F21D907500009C001 /* Main.storyboard */,
@@ -62,6 +96,35 @@
 				F1B1CB5721D907550009C001 /* Info.plist */,
 			);
 			path = ZCards;
+			sourceTree = "<group>";
+		};
+		F1B1CB5D21D9078C0009C001 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				F1B1CB5E21D907AF0009C001 /* Card.swift */,
+				F1B1CB6021D908650009C001 /* Suit.swift */,
+				F1B1CB6221D90FB70009C001 /* Rank.swift */,
+				F1B1CB6421D914320009C001 /* Deck.swift */,
+				F1B1CB7721D9252B0009C001 /* ShuffleCode.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		F1B1CB6B21D914F80009C001 /* ZCardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1B1CB7421D91ADF0009C001 /* Cards */,
+				F1B1CB6E21D914F80009C001 /* Info.plist */,
+			);
+			path = ZCardsTests;
+			sourceTree = "<group>";
+		};
+		F1B1CB7421D91ADF0009C001 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				F1B1CB7521D91AFD0009C001 /* DeckTests.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +147,24 @@
 			productReference = F1B1CB4821D907500009C001 /* ZCards.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F1B1CB6921D914F80009C001 /* ZCardsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1B1CB7121D914F80009C001 /* Build configuration list for PBXNativeTarget "ZCardsTests" */;
+			buildPhases = (
+				F1B1CB6621D914F80009C001 /* Sources */,
+				F1B1CB6721D914F80009C001 /* Frameworks */,
+				F1B1CB6821D914F80009C001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1B1CB7021D914F80009C001 /* PBXTargetDependency */,
+			);
+			name = ZCardsTests;
+			productName = ZCardsTests;
+			productReference = F1B1CB6A21D914F80009C001 /* ZCardsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +177,10 @@
 				TargetAttributes = {
 					F1B1CB4721D907500009C001 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					F1B1CB6921D914F80009C001 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F1B1CB4721D907500009C001;
 					};
 				};
 			};
@@ -113,6 +198,7 @@
 			projectRoot = "";
 			targets = (
 				F1B1CB4721D907500009C001 /* ZCards */,
+				F1B1CB6921D914F80009C001 /* ZCardsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +214,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1B1CB6821D914F80009C001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -135,12 +228,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B1CB6521D914320009C001 /* Deck.swift in Sources */,
 				F1B1CB4E21D907500009C001 /* ViewController.swift in Sources */,
+				F1B1CB7821D9252B0009C001 /* ShuffleCode.swift in Sources */,
+				F1B1CB6121D908650009C001 /* Suit.swift in Sources */,
+				F1B1CB5F21D907AF0009C001 /* Card.swift in Sources */,
+				F1B1CB6321D90FB70009C001 /* Rank.swift in Sources */,
 				F1B1CB4C21D907500009C001 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1B1CB6621D914F80009C001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1B1CB7621D91AFD0009C001 /* DeckTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1B1CB7021D914F80009C001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1B1CB4721D907500009C001 /* ZCards */;
+			targetProxy = F1B1CB6F21D914F80009C001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F1B1CB4F21D907500009C001 /* Main.storyboard */ = {
@@ -314,6 +428,46 @@
 			};
 			name = Release;
 		};
+		F1B1CB7221D914F80009C001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27QRRWZMS6;
+				INFOPLIST_FILE = ZCardsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vjosullivan.ZCardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZCards.app/ZCards";
+			};
+			name = Debug;
+		};
+		F1B1CB7321D914F80009C001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27QRRWZMS6;
+				INFOPLIST_FILE = ZCardsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vjosullivan.ZCardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZCards.app/ZCards";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -331,6 +485,15 @@
 			buildConfigurations = (
 				F1B1CB5B21D907550009C001 /* Debug */,
 				F1B1CB5C21D907550009C001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1B1CB7121D914F80009C001 /* Build configuration list for PBXNativeTarget "ZCardsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1B1CB7221D914F80009C001 /* Debug */,
+				F1B1CB7321D914F80009C001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
