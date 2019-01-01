@@ -26,4 +26,14 @@ class SimpleSimon {
             print(c)
         }
     }
+
+    /// Moves one or more cards from one column to another.
+    /// The card must be eligible to move for the move to succeed.
+    ///
+    /// - Parameters:
+    ///   - from: Source column.
+    ///   - to: Destination column.
+    func moveCard(from: Int, to: Int) {
+
+    }
 }
