@@ -10,19 +10,19 @@ import Foundation
 
 class SimpleSimon {
     
-    private var decks = [Deck]()
+    private var columns = [Deck]()
     
     init() {
         var deck = Deck(type: .shuffled)
         for _ in 0..<10 {
-            decks.append(Deck(type: .empty))
+            columns.append(Deck(type: .empty))
         }
         for limit in [10, 9, 8, 7, 6, 5, 4, 3] {
             for index in 0..<limit {
-                decks[index].add(deck.drawTopCard(), to: .topOfDeck)
+                columns[index].add(deck.drawTopCard(), to: .topOfDeck)
             }
         }
-        for c in decks {
+        for c in columns {
             print(c)
         }
     }
@@ -34,6 +34,6 @@ class SimpleSimon {
     ///   - from: Source column.
     ///   - to: Destination column.
     func moveCard(from: Int, to: Int) {
-
+        guard columns[from].count > 0 else { return }
     }
 }
