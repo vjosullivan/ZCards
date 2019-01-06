@@ -11,6 +11,7 @@ import Foundation
 struct Deck {
 
     private var deck: [Card]
+    private var index = 0
     
     var count: Int {
         return deck.count
@@ -67,6 +68,24 @@ extension Deck: CustomStringConvertible {
         }
         return "\(self.count) cards: \(deck)"
             
+    }
+}
+
+extension Deck: Sequence {
+
+    func makeIterator() -> Deck {
+        return self
+    }
+}
+
+extension Deck: IteratorProtocol {
+    mutating func next() -> Card? {
+        guard index >= 0 && index < deck.count else {
+            return nil
+        }
+        let c = deck[index]
+        index += 1
+        return c
     }
 }
 

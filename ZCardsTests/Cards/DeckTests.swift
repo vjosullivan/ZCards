@@ -39,7 +39,7 @@ class DeckTests: XCTestCase {
         XCTAssertNotEqual(aceOfClubs, d.topCard, "The first card should not usually be the Ace of Clubs.")
     }
     
-    func testTopCard() {
+    func testSortedTopCard() {
         let d = Deck(type: .sorted)
         XCTAssertEqual(52, d.count, "A new sorted deck should have fiftytwo cards.")
         XCTAssertEqual(aceOfClubs, d.topCard, "The first card should be the Ace of Clubs.")
@@ -49,8 +49,55 @@ class DeckTests: XCTestCase {
     func testRemoveTopCard() {
         var d = Deck(type: .sorted)
         let drawnCard = d.drawTopCard()
-        XCTAssertEqual(51, d.count, "Deck with one card drawn should have fiftyone cards.")
+        XCTAssertEqual(51, d.count, "A full deck with one card drawn should have fiftyone cards.")
         XCTAssertEqual(aceOfClubs, drawnCard, "The drawn card should be the Ace of Clubs.")
         XCTAssertEqual(twoOfClubs, d.topCard, "The next top card should be the Two of Clubs.")
+    }
+
+    /// A shuffled deck should contain 52 different cards.
+    func testDeckSequence() {
+        let deck = Deck(type: .shuffled)
+        var prevCard: Card? = nil
+        for card in deck {
+            XCTAssertNotEqual(prevCard, card)
+            prevCard = card
+        }
+    }
+
+    /// A shuffled deck should contain no cards.
+    func testDeckEmptySequence() {
+        let deck = Deck(type: .empty)
+        for _ in deck {
+            XCTFail()
+        }
+    }
+
+    func testInsertRemoveTopCard() {
+        let card = Card(rank: .Ace, suit: .Spades)
+        var deck = Deck(type: .empty)
+        XCTAssertEqual(0, deck.count)
+        deck.addToTop(card)
+        XCTAssertEqual(1, deck.count)
+        let newCard = deck.drawTopCard()
+        XCTAssertEqual(0, deck.count)
+        XCTAssertEqual(card, newCard)
+    }
+
+    func testEmptyDeckString() {
+        XCTAssertEqual("Empty deck", Deck(type: .empty).description)
+    }
+
+    func testBottomInsert() {
+        let cardAS = Card(rank: .Ace, suit: .Spades)
+        let card2S = Card(rank: .Two, suit: .Spades)
+        var deck = Deck(type: .empty)
+        XCTAssertEqual(0, deck.count)
+        deck.add(cardAS, to: .topOfDeck)
+        deck.add(card2S, to: .bottomOfDeck)
+        XCTAssertEqual(2, deck.count)
+        let card1 = deck.drawTopCard()
+        let card2 = deck.drawTopCard()
+        XCTAssertEqual(cardAS, card1)
+        XCTAssertEqual(card2S, card2)
     }
 }
