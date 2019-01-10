@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3484AD8921DA1B51002A75B2 /* SimpleSimonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484AD8821DA1B51002A75B2 /* SimpleSimonGame.swift */; };
+		F15FB60F21E2422700F41090 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FB60E21E2422700F41090 /* CardTests.swift */; };
+		F15FB61121E2446100F41090 /* DeckSequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FB61021E2446100F41090 /* DeckSequences.swift */; };
 		F1B1CB4C21D907500009C001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB4B21D907500009C001 /* AppDelegate.swift */; };
 		F1B1CB4E21D907500009C001 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB4D21D907500009C001 /* ViewController.swift */; };
 		F1B1CB5121D907500009C001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B1CB4F21D907500009C001 /* Main.storyboard */; };
@@ -19,6 +21,7 @@
 		F1B1CB6521D914320009C001 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB6421D914320009C001 /* Deck.swift */; };
 		F1B1CB7621D91AFD0009C001 /* DeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB7521D91AFD0009C001 /* DeckTests.swift */; };
 		F1B1CB7821D9252B0009C001 /* ShuffleCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1CB7721D9252B0009C001 /* ShuffleCode.swift */; };
+		F1DF24A621E783A700952299 /* DeckSequenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DF24A521E783A700952299 /* DeckSequenceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		3484AD8821DA1B51002A75B2 /* SimpleSimonGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSimonGame.swift; sourceTree = "<group>"; };
+		F15FB60E21E2422700F41090 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
+		F15FB61021E2446100F41090 /* DeckSequences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSequences.swift; sourceTree = "<group>"; };
 		F1B1CB4821D907500009C001 /* ZCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B1CB4B21D907500009C001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1B1CB4D21D907500009C001 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		F1B1CB6E21D914F80009C001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1B1CB7521D91AFD0009C001 /* DeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTests.swift; sourceTree = "<group>"; };
 		F1B1CB7721D9252B0009C001 /* ShuffleCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleCode.swift; sourceTree = "<group>"; };
+		F1DF24A521E783A700952299 /* DeckSequenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSequenceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 				F1B1CB6021D908650009C001 /* Suit.swift */,
 				F1B1CB6221D90FB70009C001 /* Rank.swift */,
 				F1B1CB6421D914320009C001 /* Deck.swift */,
+				F15FB61021E2446100F41090 /* DeckSequences.swift */,
 				F1B1CB7721D9252B0009C001 /* ShuffleCode.swift */,
 			);
 			path = Cards;
@@ -134,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				F1B1CB7521D91AFD0009C001 /* DeckTests.swift */,
+				F15FB60E21E2422700F41090 /* CardTests.swift */,
+				F1DF24A521E783A700952299 /* DeckSequenceTests.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -241,6 +250,7 @@
 			files = (
 				F1B1CB6521D914320009C001 /* Deck.swift in Sources */,
 				F1B1CB4E21D907500009C001 /* ViewController.swift in Sources */,
+				F15FB61121E2446100F41090 /* DeckSequences.swift in Sources */,
 				3484AD8921DA1B51002A75B2 /* SimpleSimonGame.swift in Sources */,
 				F1B1CB7821D9252B0009C001 /* ShuffleCode.swift in Sources */,
 				F1B1CB6121D908650009C001 /* Suit.swift in Sources */,
@@ -255,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1B1CB7621D91AFD0009C001 /* DeckTests.swift in Sources */,
+				F15FB60F21E2422700F41090 /* CardTests.swift in Sources */,
+				F1DF24A621E783A700952299 /* DeckSequenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
