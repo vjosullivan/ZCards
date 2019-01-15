@@ -22,8 +22,17 @@ class SimpleSimon {
                 columns[index].add(deck.drawTopCard(), to: .topOfDeck)
             }
         }
+        for i in 0..<10 {
+            print("Col \(i): \(columns[i].count)")
+        }
         for c in columns {
             print(c)
         }
     }
+//
+//    init?(decks: [Deck]) {
+//        guard decks.count == 8 else {
+//            return nil
+//        }
+//    }
 }
